@@ -1,5 +1,5 @@
 import Card from '../../components/card/Card';
-import { Main } from '../../components/elements/Main';
+import { GridContainer, Main } from '../../components/elements';
 import Header from '../../components/header/Header';
 import SearchBar from './components/searchBar/SearchBar';
 
@@ -9,9 +9,24 @@ export default function Countries() {
       <Header>
         <SearchBar />
       </Header>
-      <div>
+      <GridContainer>
         <Card />
-      </div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </GridContainer>
     </Main>
   );
 }

@@ -1,4 +1,4 @@
-import { Main } from '../../components/elements/Main';
+import { Main } from '../../components/elements';
 import Header from '../../components/header/Header';
 
 export default function Home() {
