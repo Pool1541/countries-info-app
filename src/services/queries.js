@@ -5,6 +5,9 @@ export const ALL_COUNTRIES = gql`
     countries {
       code
       name
+      continent {
+        name
+      }
     }
   }
 `;
