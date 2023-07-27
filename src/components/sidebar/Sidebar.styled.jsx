@@ -13,7 +13,7 @@ export const StyledSidebar = styled.aside`
 
 export const LogoContainer = styled.div`
   width: 100%;
-  height: 9.5rem;
+  height: 9rem;
   background-color: var(--white);
   color: var(--background);
   border-radius: 1rem;
@@ -22,6 +22,7 @@ export const LogoContainer = styled.div`
   justify-content: center;
 
   h1 {
+    font-size: 3rem;
   }
 `;
 
@@ -38,7 +39,7 @@ export const Navbar = styled.nav`
       padding-left: 3rem;
       font-size: 3rem;
       font-weight: bold;
-      padding: 1.5rem 0 1.5rem 3rem;
+      padding: 1rem 0 1rem 3rem;
       border-radius: 1rem;
       transition: all 0.1s ease;
     }

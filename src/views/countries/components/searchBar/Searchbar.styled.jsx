@@ -28,7 +28,7 @@ export const SearchBarInputWrapper = styled.div`
   }
 
   input::placeholder {
-    color: #8d8d8d;
+    color: #a0a0a0;
   }
 `;
 
