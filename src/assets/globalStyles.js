@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     --text-contrast: #4b5563;
     --text-contrast-transparent: #9ca3af; 
     --text-h-contrast: #111827;
-    --accent: #ca78ff;
+    --accent: #009cff;
     --full-color-square: rgba(202, 120, 255, 0.3763480392156863);
     --light-color-square: rgba(202, 120, 255, 0.5763480392156863);
     --shadow-dark:29px 38px 34px -15px rgba(0, 0, 0, 0.28);
