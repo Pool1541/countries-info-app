@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import BREAKPOINTS from '../../assets/breakPoints';
 
 export const StyledCard = styled.div`
   height: 250px;
   overflow: hidden;
   border-radius: 3rem;
   box-shadow: -2px -1px 10px 2px #00000052;
+
+  @media screen and (${BREAKPOINTS.LAPTOP_M}) {
+    height: 200px;
+  }
 `;
 
 export const Thumbnail = styled.div`
@@ -41,11 +46,11 @@ export const FlagContainer = styled.div`
 export const CardTitle = styled.div`
   h3 {
     color: var(--accent);
-    font-size: 2.7rem;
+    font-size: clamp(2rem, 2.5vw, 2.7rem);
   }
 
   p {
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
     color: var(--background-hover);
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BREAKPOINTS from '../../../../assets/breakPoints';
 
 export const StyledSearchBar = styled.form`
   display: flex;
@@ -9,6 +10,10 @@ export const StyledSearchBar = styled.form`
   border-radius: 4rem;
   margin: auto;
   box-shadow: 1px 2px 1px 1px #0000005a;
+
+  @media screen and (${BREAKPOINTS.LAPTOP_M}) {
+    display: none;
+  }
 `;
 
 export const SearchBarInputWrapper = styled.div`
