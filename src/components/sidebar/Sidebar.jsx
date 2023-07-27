@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { LogoContainer, Navbar, StyledSidebar } from './Sidebar.styled';
+import { LogoContainer, Navbar, StyledSidebar, ToggleButton } from './Sidebar.styled';
 import { ROUTES } from '../../config/routes';
+import useSidebar from '../../hooks/useSidebar';
 
 export default function Sidebar() {
+  const { display, toggleSidebar } = useSidebar();
+
   return (
-    <StyledSidebar>
+    <StyledSidebar isActive={display}>
       <LogoContainer>
         <h1>Logo</h1>
       </LogoContainer>
@@ -21,6 +24,11 @@ export default function Sidebar() {
           </li>
         </ul>
       </Navbar>
+      <ToggleButton isActive={display} onClick={toggleSidebar}>
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+      </ToggleButton>
     </StyledSidebar>
   );
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BREAKPOINTS from '../../assets/breakPoints';
 
 export const StyledSidebar = styled.aside`
   position: fixed;
@@ -9,6 +10,12 @@ export const StyledSidebar = styled.aside`
   background-color: var(--background);
   color: var(--text);
   padding: 3.5rem;
+  transform: ${({ isActive }) => (isActive ? 'translateX(0)' : 'translateX(-100%)')};
+  transition: transform 0.3s ease;
+
+  @media screen and (${BREAKPOINTS.MOVIL_L}) {
+    width: 30rem;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -52,5 +59,42 @@ export const Navbar = styled.nav`
       background-color: var(--white);
       color: var(--background);
     }
+  }
+`;
+
+export const ToggleButton = styled.button`
+  background-color: var(--background-hover);
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 6.3rem;
+  right: -5.5rem;
+  flex-direction: column;
+  gap: 7px;
+  display: none;
+  z-index: 100;
+
+  @media screen and (${BREAKPOINTS.LAPTOP_L}) {
+    display: flex;
+  }
+
+  div {
+    width: 3rem;
+    height: 0.2rem;
+    opacity: 1;
+    background: var(--white);
+    transition: all 0.3s ease;
+  }
+
+  div:first-child {
+    transform: ${({ isActive }) => (isActive ? 'rotate(-45deg) translate(-8px, 6px)' : 'none')};
+  }
+
+  div:nth-child(2) {
+    opacity: ${({ isActive }) => (isActive ? '0' : '1')};
+  }
+
+  div:last-child {
+    transform: ${({ isActive }) => (isActive ? 'rotate(45deg) translate(-7px, -5px)' : 'none')};
   }
 `;

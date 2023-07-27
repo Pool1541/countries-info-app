@@ -3,17 +3,14 @@ import BREAKPOINTS from '../../../../assets/breakPoints';
 
 export const StyledSearchBar = styled.form`
   display: flex;
-  width: 100%;
+  width: 90%;
   max-width: 80rem;
   background-color: var(--white);
   padding: 1.5rem 2rem 1.5rem 3.5rem;
   border-radius: 4rem;
   margin: auto;
   box-shadow: 1px 2px 1px 1px #0000005a;
-
-  @media screen and (${BREAKPOINTS.LAPTOP_M}) {
-    display: none;
-  }
+  overflow: hidden;
 `;
 
 export const SearchBarInputWrapper = styled.div`
@@ -28,6 +25,7 @@ export const SearchBarInputWrapper = styled.div`
   }
 
   input {
+    width: 100%;
     color: var(--background);
     font-size: 1.5rem;
   }
@@ -46,8 +44,19 @@ export const SearchBarButton = styled.button`
   align-items: center;
   gap: 1.5rem;
 
+  @media screen and (${BREAKPOINTS.TABLET_M}) {
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   span {
     font-size: 2.5rem;
     font-weight: 300;
+
+    @media screen and (${BREAKPOINTS.TABLET_L}) {
+      display: none;
+    }
   }
 `;
