@@ -565,25 +565,25 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):n
   @font-face {
     font-family: 'Ubuntu';
     font-weight: 300;
-    src: url('/fonts/Ubuntu-Light.woff2') format('woff2');
+    src: url('./fonts/Ubuntu-Light.woff2');
   }
 
   @font-face {
     font-family: 'Ubuntu';
     font-weight: 400;
-    src: url('/fonts/Ubuntu-Regular.woff2') format('woff2');
+    src: url('./fonts/Ubuntu-Regular.woff2');
   }
 
   @font-face {
     font-family: 'Ubuntu';
     font-weight: 500;
-    src: url('/fonts/Ubuntu-Medium.woff2') format('woff2');
+    src: url('./fonts/Ubuntu-Medium.woff2');
   }
 
   @font-face {
     font-family: 'Ubuntu';
     font-weight: 700;
-    src: url('/fonts/Ubuntu-Bold.woff2') format('woff2');
+    src: url('./fonts/Ubuntu-Bold.woff2');
   }
     :root {
     --primary : #e3f4ff;
