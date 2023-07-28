@@ -12,7 +12,7 @@ export default function SidebarContextProvider({ children }) {
   });
 
   function toggleSidebar() {
-    setDisplay((prev) => !prev);
+    if (window.innerWidth <= 1200) setDisplay((prev) => !prev);
   }
 
   return (

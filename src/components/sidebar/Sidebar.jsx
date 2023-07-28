@@ -14,13 +14,19 @@ export default function Sidebar() {
       <Navbar>
         <ul>
           <li>
-            <NavLink to={ROUTES.home}>Inicio</NavLink>
+            <NavLink to={ROUTES.home} onClick={toggleSidebar}>
+              Inicio
+            </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.countries}>Paises</NavLink>
+            <NavLink to={ROUTES.countries} onClick={toggleSidebar}>
+              Paises
+            </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.continents}>Continentes</NavLink>
+            <NavLink to={ROUTES.continents} onClick={toggleSidebar}>
+              Continentes
+            </NavLink>
           </li>
         </ul>
       </Navbar>
