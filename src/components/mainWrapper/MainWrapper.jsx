@@ -4,6 +4,7 @@ import GlobalStyle from '../../assets/globalStyles';
 import SidebarContextProvider from '../../context/SidebarContext';
 import CountriesContextProvider from '../../context/CountriesContext';
 import { BrowserRouter } from 'react-router-dom';
+import ModalContextProvider from '../../context/ModalContext';
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: 'https://countries.trevorblades.com/' }),
@@ -29,8 +30,10 @@ export default function MainWrapper({ children }) {
         <BrowserRouter>
           <CountriesContextProvider>
             <SidebarContextProvider>
-              {children}
-              <GlobalStyle />
+              <ModalContextProvider>
+                {children}
+                <GlobalStyle />
+              </ModalContextProvider>
             </SidebarContextProvider>
           </CountriesContextProvider>
         </BrowserRouter>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BREAKPOINTS from '../../assets/breakPoints';
 
-export const StyledCard = styled.div`
+export const StyledCard = styled.button`
   height: 250px;
   overflow: hidden;
   border-radius: 3rem;

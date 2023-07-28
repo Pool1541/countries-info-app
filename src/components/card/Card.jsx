@@ -2,8 +2,10 @@ import Flag from 'react-world-flags';
 import { CardContent, CardTitle, FlagContainer, StyledCard, Thumbnail } from './Card.styled';
 import { fetchPhoto } from '../../services/pexelsService';
 import { useQuery } from 'react-query';
+import useModal from '../../hooks/useModal';
 
 export default function Card({ country }) {
+  const { getCountryInfo } = useModal();
   const {
     data: photo,
     isLoading,
@@ -14,7 +16,7 @@ export default function Card({ country }) {
   });
 
   return (
-    <StyledCard>
+    <StyledCard onClick={() => getCountryInfo(country.code, photo)}>
       <Thumbnail>
         {isError ? (
           <img

@@ -6,10 +6,13 @@ import Main from '../../components/main/Main';
 import useCountries from '../../hooks/useCountries';
 import SearchBar from './components/searchBar/SearchBar';
 import { useParams } from 'react-router-dom';
+import Modal from '../../components/modal/Modal';
+import useModal from '../../hooks/useModal';
 
 export default function Countries() {
   const { continentCode } = useParams();
   const { data, loading, error, getCountriesByContinent } = useCountries();
+  const { isModalOpen } = useModal();
 
   useEffect(() => {
     if (continentCode) getCountriesByContinent(continentCode);
@@ -29,6 +32,7 @@ export default function Countries() {
           {data.countries.slice(0, 30).map((country) => (
             <Card key={country.code} country={country} />
           ))}
+          {isModalOpen && <Modal />}
         </GridContainer>
       )}
     </Main>
