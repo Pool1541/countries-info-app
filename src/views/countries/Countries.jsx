@@ -9,6 +9,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import Modal from '../../components/modal/Modal';
 import useModal from '../../hooks/useModal';
 import { useState } from 'react';
+import LoadingSpiner from '../../components/LoadingSpinner/LoadingSpiner';
 
 export default function Countries() {
   const { continentCode } = useParams();
@@ -37,7 +38,7 @@ export default function Countries() {
         <SearchBar filterFn={filterCountries} />
       </Header>
       {loading ? (
-        <div>Loading...</div>
+        <LoadingSpiner/>
       ) : error ? (
         <div>Error</div>
       ) : (

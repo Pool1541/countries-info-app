@@ -9,6 +9,7 @@ import {
 } from './Modal.styled';
 import useModal from '../../hooks/useModal';
 import useOutsideClick from '../../hooks/useOutsideClick';
+import LoadingSpiner from '../LoadingSpinner/LoadingSpiner';
 
 export default function Modal() {
   const {
@@ -24,7 +25,7 @@ export default function Modal() {
         <img src={modalImage?.image} alt={modalImage?.alt} />
       </ModalImage>
       {loading ? (
-        <div>cargando...</div>
+        <LoadingSpiner />
       ) : (
         <>
           <ModalTitle>
