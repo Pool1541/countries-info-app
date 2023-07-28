@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const ALL_COUNTRIES = gql`
+export const FIND_ALL_COUNTRIES = gql`
   query {
     countries {
       code
@@ -39,6 +39,15 @@ export const FIND_COUNTRY_BY_CODE = gql`
         code
         name
       }
+    }
+  }
+`;
+
+export const FIND_ALL_CONTINENTS = gql`
+  query {
+    continents {
+      code
+      name
     }
   }
 `;

@@ -72,7 +72,7 @@ export const ToggleButton = styled.button`
   flex-direction: column;
   gap: 7px;
   display: none;
-  z-index: 100;
+  z-index: 10000;
 
   @media screen and (${BREAKPOINTS.LAPTOP_L}) {
     display: flex;
