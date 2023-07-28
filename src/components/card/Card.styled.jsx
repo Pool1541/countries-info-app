@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import BREAKPOINTS from '../../assets/breakPoints';
 
 export const StyledCard = styled.button`
+  max-width: 35rem;
   height: 250px;
   overflow: hidden;
   border-radius: 3rem;

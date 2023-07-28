@@ -29,28 +29,28 @@ export default function Modal() {
         <>
           <ModalTitle>
             <FlagContainer>
-              <Flag code={data.country.code} width={100} height={100} />
+              <Flag code={data?.country?.code} width={100} height={100} />
             </FlagContainer>
             <Title>
-              <h3>{data.country.name}</h3>
-              <p>{data.country.continent.name}</p>
+              <h3>{data?.country?.name}</h3>
+              <p>{data?.country?.continent.name}</p>
             </Title>
           </ModalTitle>
           <ModalFeature>
             <p>capital :</p>
-            <p>{data.country.capital}</p>
+            <p>{data?.country?.capital}</p>
           </ModalFeature>
           <ModalFeature>
             <p>Lenguaje :</p>
-            <p>{data.country.languages[0].name}</p>
+            <p>{data?.country?.languages[0]?.name}</p>
           </ModalFeature>
           <ModalFeature>
             <p>Prefijo :</p>
-            <p>+ {data.country.phone}</p>
+            <p>+ {data?.country?.phone}</p>
           </ModalFeature>
           <ModalFeature>
             <p>Moneda :</p>
-            <p>{data.country.currency}</p>
+            <p>{data?.country?.currency}</p>
           </ModalFeature>
         </>
       )}
