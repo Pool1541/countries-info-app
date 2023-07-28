@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import GlobalStyle from '../../assets/globalStyles';
 import SidebarContextProvider from '../../context/SidebarContext';
 import CountriesContextProvider from '../../context/CountriesContext';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import ModalContextProvider from '../../context/ModalContext';
 
 const client = new ApolloClient({
@@ -27,7 +27,7 @@ export default function MainWrapper({ children }) {
   return (
     <ApolloProvider client={client}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <HashRouter>
           <CountriesContextProvider>
             <SidebarContextProvider>
               <ModalContextProvider>
@@ -36,7 +36,7 @@ export default function MainWrapper({ children }) {
               </ModalContextProvider>
             </SidebarContextProvider>
           </CountriesContextProvider>
-        </BrowserRouter>
+        </HashRouter>
       </QueryClientProvider>
     </ApolloProvider>
   );
