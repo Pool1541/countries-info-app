@@ -10,13 +10,13 @@ export const StyledSearchBar = styled.form`
   border-radius: 4rem;
   margin: auto;
   box-shadow: 1px 2px 1px 1px #0000005a;
-  overflow: hidden;
 `;
 
 export const SearchBarInputWrapper = styled.div`
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   label {
     font-size: 2.5rem;

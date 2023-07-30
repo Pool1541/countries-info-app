@@ -43,7 +43,7 @@ export default function Countries() {
         <div>Error</div>
       ) : (
         <GridContainer>
-          {countries?.slice(0, 30).map((country) => (
+          {countries?.map((country) => (
             <Card key={country.code} country={country} />
           ))}
           {isModalOpen && <Modal />}
