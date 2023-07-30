@@ -16,7 +16,7 @@ export default function Card({ country }) {
   });
 
   return (
-    <StyledCard onClick={() => getCountryInfo(country.code, photo)}>
+    <StyledCard onClick={() => getCountryInfo(country.code, photo)} title={country.name}>
       <Thumbnail>
         {isError ? (
           <img

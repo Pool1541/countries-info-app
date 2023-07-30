@@ -38,11 +38,11 @@ export default function Modal() {
             </Title>
           </ModalTitle>
           <ModalFeature>
-            <p>capital :</p>
+            <p>Capital :</p>
             <p>{data?.country?.capital}</p>
           </ModalFeature>
           <ModalFeature>
-            <p>Lenguaje :</p>
+            <p>Idioma :</p>
             <p>{data?.country?.languages[0]?.name}</p>
           </ModalFeature>
           <ModalFeature>

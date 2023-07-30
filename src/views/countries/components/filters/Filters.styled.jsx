@@ -1,15 +1,25 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const SlideInDown = keyframes`
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 export const StyledFilters = styled.div`
   width: calc(100% + 3.5rem);
   padding: 3rem 3.5rem;
   border-radius: 5rem;
+  transform: translateY(-3rem);
+  opacity: 0;
   position: absolute;
   left: -3.5rem;
   top: 8rem;
   z-index: 1000;
   background-color: var(--white);
   color: var(--background);
+  animation: ${SlideInDown} 0.2s ease-in-out forwards;
 `;
 
 export const FiltersHeader = styled.div`

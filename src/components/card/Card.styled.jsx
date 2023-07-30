@@ -34,7 +34,7 @@ export const CardContent = styled.div`
 
 export const FlagContainer = styled.div`
   width: 70px;
-  height: 50px;
+
   margin-right: 2rem;
 
   img {
@@ -45,9 +45,15 @@ export const FlagContainer = styled.div`
 `;
 
 export const CardTitle = styled.div`
+  width: 20rem;
+  text-align: left;
   h3 {
     color: var(--accent);
     font-size: clamp(2rem, 2.5vw, 2.7rem);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   p {
