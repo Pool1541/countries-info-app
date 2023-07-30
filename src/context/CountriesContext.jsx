@@ -1,32 +1,30 @@
 import { useQuery } from '@apollo/client';
 import { createContext } from 'react';
-import { FIND_ALL_COUNTRIES, FIND_COUNTRIES_BY_CONTINENT } from '../services/queries';
-import { useLocation } from 'react-router-dom';
-import { ROUTES } from '../config/routes';
+import useFilters from '../hooks/useFilters';
+import useSetQuery from '../hooks/useSetQuery';
 
 export const CountriesContext = createContext();
 
-function useSetQuery() {
-  let query = FIND_ALL_COUNTRIES;
-  const { pathname } = useLocation();
-
-  if (pathname.includes(`${ROUTES.continents}/`)) {
-    query = FIND_COUNTRIES_BY_CONTINENT;
-  }
-
-  return query;
-}
-
 export default function CountriesContextProvider({ children }) {
+  const { continents, changeParams, clearParams, continentCodes } = useFilters();
   const query = useSetQuery();
-  const { data, loading, error, refetch } = useQuery(query);
+  const { data, loading, error, refetch } = useQuery(query, { variables: { continentCodes } });
 
   function getCountriesByContinent(continentCode) {
     refetch({ continentCode });
   }
 
   return (
-    <CountriesContext.Provider value={{ data, loading, error, getCountriesByContinent }}>
+    <CountriesContext.Provider
+      value={{
+        data,
+        loading,
+        error,
+        getCountriesByContinent,
+        continents,
+        changeParams,
+        clearParams,
+      }}>
       {children}
     </CountriesContext.Provider>
   );

@@ -3,10 +3,13 @@ import { SearchIcon } from '../../../../components/icons';
 import { SearchBarButton, SearchBarInputWrapper, StyledSearchBar } from './Searchbar.styled';
 import Filters from '../filters/Filters';
 import useOutsideClick from '../../../../hooks/useOutsideClick';
+import { useLocation } from 'react-router-dom';
+import { ROUTES } from '../../../../config/routes';
 
 export default function SearchBar({ filterFn }) {
   const [countryName, setCountryName] = useState('');
   const [displayFilters, setDisplayFilters] = useState(false);
+  const { pathname } = useLocation();
   const ref = useOutsideClick(hiddenFilters);
 
   function handleChange(e) {
@@ -38,7 +41,7 @@ export default function SearchBar({ filterFn }) {
           onClick={showFilters}
           autoComplete='disabled'
         />
-        {displayFilters && <Filters />}
+        {displayFilters && pathname == ROUTES.countries && <Filters />}
       </SearchBarInputWrapper>
       <SearchBarButton>
         <SearchIcon />

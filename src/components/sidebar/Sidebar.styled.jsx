@@ -12,6 +12,11 @@ export const StyledSidebar = styled.aside`
   padding: 3.5rem;
   transform: ${({ isActive }) => (isActive ? 'translateX(0)' : 'translateX(-100%)')};
   transition: transform 0.3s ease;
+  z-index: 1000;
+
+  @media screen and (${BREAKPOINTS.TABLET_L}) {
+    width: 100%;
+  }
 
   @media screen and (${BREAKPOINTS.MOVIL_L}) {
     width: 30rem;

@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import BREAKPOINTS from '../../../../assets/breakPoints';
 
 const SlideInDown = keyframes`
   to {
@@ -20,6 +21,18 @@ export const StyledFilters = styled.div`
   background-color: var(--white);
   color: var(--background);
   animation: ${SlideInDown} 0.2s ease-in-out forwards;
+
+  @media screen and (${BREAKPOINTS.LAPTOP_L}) {
+    width: calc(100% + 22rem);
+  }
+
+  @media screen and (${BREAKPOINTS.TABLET_L}) {
+    width: calc(100% + 12rem);
+  }
+
+  @media screen and (${BREAKPOINTS.MOVIL_L}) {
+    padding: 3rem 2rem;
+  }
 `;
 
 export const FiltersHeader = styled.div`
@@ -28,21 +41,37 @@ export const FiltersHeader = styled.div`
   margin-bottom: 2.5rem;
   font-size: 2.2rem;
 
+  @media screen and (${BREAKPOINTS.TABLET_M}) {
+    font-size: 1.5rem;
+  }
+
   button {
     font-size: 2.2rem;
     color: var(--accent);
+
+    @media screen and (${BREAKPOINTS.TABLET_M}) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 export const FiltersContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  grid-template-columns: repeat(3, minmax(8rem, 1fr));
+
+  @media screen and (${BREAKPOINTS.TABLET_M}) {
+    grid-template-columns: repeat(2, minmax(5rem, 1fr));
+  }
   gap: 2rem;
 `;
 
 export const StyledFilterButton = styled.button`
   width: 100%;
   height: 15rem;
+
+  @media screen and (${BREAKPOINTS.TABLET_M}) {
+    height: 10rem;
+  }
 `;
 
 export const Image = styled.div`
@@ -53,11 +82,6 @@ export const Image = styled.div`
   overflow: hidden;
   box-shadow: ${({ selected }) =>
     selected ? '0 0 5px 1px var(--accent), 0 0 5px 1px var(--accent)' : ''};
-
-  /* &.active {
-    box-shadow:
-      
-  } */
 
   img {
     width: 100%;
@@ -73,4 +97,8 @@ export const Title = styled.div`
   justify-content: flex-start;
   margin-left: 0.5rem;
   color: var(--background);
+
+  @media screen and (${BREAKPOINTS.TABLET_M}) {
+    font-size: 1.4rem;
+  }
 `;

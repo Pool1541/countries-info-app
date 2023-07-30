@@ -44,6 +44,18 @@ export const FIND_COUNTRY_BY_CODE = gql`
   }
 `;
 
+export const FIND_COUNTRIES_BY_SELECTED_CONTINENT = gql`
+  query GetCountries($continentCodes: [String!]!) {
+    countries(filter: { continent: { in: $continentCodes } }) {
+      code
+      name(lang: "es")
+      continent {
+        name
+      }
+    }
+  }
+`;
+
 export const FIND_ALL_CONTINENTS = gql`
   query {
     continents {

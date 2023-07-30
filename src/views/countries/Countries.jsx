@@ -1,20 +1,20 @@
-import { useEffect } from 'react';
 import Card from '../../components/card/Card';
-import { GridContainer } from '../../components/elements';
-import Header from '../../components/header/Header';
 import Main from '../../components/main/Main';
-import useCountries from '../../hooks/useCountries';
-import SearchBar from './components/searchBar/SearchBar';
-import { useLocation, useParams } from 'react-router-dom';
+import Header from '../../components/header/Header';
 import Modal from '../../components/modal/Modal';
 import useModal from '../../hooks/useModal';
-import { useState } from 'react';
+import useCountries from '../../hooks/useCountries';
+import SearchBar from './components/searchBar/SearchBar';
 import LoadingSpiner from '../../components/LoadingSpinner/LoadingSpiner';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { GridContainer } from '../../components/elements';
+import { useLocation, useParams } from 'react-router-dom';
 
 export default function Countries() {
   const { continentCode } = useParams();
   const { pathname } = useLocation();
-  const [countries, setCountries] = useState();
+  const [countries, setCountries] = useState([]);
   const { data, loading, error, getCountriesByContinent } = useCountries();
   const { isModalOpen } = useModal();
 
@@ -30,7 +30,7 @@ export default function Countries() {
 
   useEffect(() => {
     if (!loading) setCountries(data.countries);
-  }, [loading, pathname]);
+  }, [loading, pathname, data]);
 
   return (
     <Main>
@@ -42,12 +42,14 @@ export default function Countries() {
       ) : error ? (
         <div>Error</div>
       ) : (
-        <GridContainer>
-          {countries?.map((country) => (
-            <Card key={country.code} country={country} />
-          ))}
+        <div style={{ display: 'flex' }}>
+          <GridContainer>
+            {countries.slice(0, 15).map((country) => (
+              <Card key={country.code} country={country} />
+            ))}
+          </GridContainer>
           {isModalOpen && <Modal />}
-        </GridContainer>
+        </div>
       )}
     </Main>
   );

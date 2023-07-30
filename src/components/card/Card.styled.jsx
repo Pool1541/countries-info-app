@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import BREAKPOINTS from '../../assets/breakPoints';
 
 export const StyledCard = styled.button`
+  width: 100%;
   max-width: 35rem;
   height: 250px;
   overflow: hidden;
@@ -28,7 +29,7 @@ export const CardContent = styled.div`
   height: 40%;
   display: flex;
   align-items: center;
-  background-color: var(--white);
+  background-color: ${({ isActive }) => (isActive ? 'var(--accent)' : 'var(--white)')};
   padding: 2rem 3rem;
 `;
 
@@ -48,8 +49,8 @@ export const CardTitle = styled.div`
   width: 20rem;
   text-align: left;
   h3 {
-    color: var(--accent);
-    font-size: clamp(2rem, 2.5vw, 2.7rem);
+    color: ${({ isActive }) => (isActive ? 'var(--white)' : 'var(--accent)')};
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -57,7 +58,7 @@ export const CardTitle = styled.div`
   }
 
   p {
-    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
-    color: var(--background-hover);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: ${({ isActive }) => (isActive ? 'var(--white)' : 'var(--background-hover)')};
   }
 `;

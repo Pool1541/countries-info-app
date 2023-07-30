@@ -5,10 +5,10 @@ import { useQuery } from 'react-query';
 import useModal from '../../hooks/useModal';
 
 export default function Card({ country }) {
-  const { getCountryInfo } = useModal();
+  const { getCountryInfo, currentCode } = useModal();
   const {
     data: photo,
-    isLoading,
+    // isLoading,
     isError,
   } = useQuery({
     queryKey: ['photo', country.name],
@@ -27,11 +27,11 @@ export default function Card({ country }) {
           <img src={photo?.image} alt={photo?.alt} />
         )}
       </Thumbnail>
-      <CardContent>
+      <CardContent isActive={currentCode === country.code}>
         <FlagContainer>
           <Flag code={country.code} height={100} width={100} />
         </FlagContainer>
-        <CardTitle>
+        <CardTitle isActive={currentCode === country.code}>
           <h3>{country.name}</h3>
           <p>{country.continent.name}</p>
         </CardTitle>

@@ -6,15 +6,23 @@ import { useState } from 'react';
 export const ModalContext = createContext();
 
 export default function ModalContextProvider({ children }) {
+  const [currentCode, setCurrentCode] = useState();
   const [getResults, response] = useLazyQuery(FIND_COUNTRY_BY_CODE);
   const [modalImage, setModalImage] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function toggleModal() {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen((prev) => {
+      if (prev) {
+        setCurrentCode();
+      }
+
+      return !isModalOpen;
+    });
   }
 
   function getCountryInfo(countryCode, imageInfo) {
+    setCurrentCode(countryCode);
     getResults({ variables: { countryCode } });
     setModalImage(imageInfo);
     toggleModal();
@@ -22,7 +30,14 @@ export default function ModalContextProvider({ children }) {
 
   return (
     <ModalContext.Provider
-      value={{ getCountryInfo, response, modalImage, isModalOpen, toggleModal }}>
+      value={{
+        getCountryInfo,
+        response,
+        modalImage,
+        isModalOpen,
+        currentCode,
+        toggleModal,
+      }}>
       {children}
     </ModalContext.Provider>
   );
