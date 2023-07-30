@@ -30,7 +30,7 @@ export default function SearchBar({ filterFn }) {
 
   return (
     <StyledSearchBar onSubmit={handleSubmit}>
-      <SearchBarInputWrapper ref={ref}>
+      <SearchBarInputWrapper ref={ref} isFocused={displayFilters}>
         <label>País</label>
         <input
           placeholder='Escribe el pais que deseas ver'

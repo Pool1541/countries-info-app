@@ -51,11 +51,12 @@ export const Image = styled.div`
   border: 1px solid #cecece;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: ${({ selected }) =>
+    selected ? '0 0 5px 1px var(--accent), 0 0 5px 1px var(--accent)' : ''};
 
   /* &.active {
     box-shadow:
-      0 0 5px 1px var(--accent),
-      0 0 5px 1px var(--accent);
+      
   } */
 
   img {

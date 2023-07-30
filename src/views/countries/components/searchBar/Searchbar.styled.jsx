@@ -26,8 +26,13 @@ export const SearchBarInputWrapper = styled.div`
 
   input {
     width: 100%;
+    line-height: 1.5;
+    max-width: 23rem;
     color: var(--background);
     font-size: 1.5rem;
+    transition: border 0.2s ease;
+    border-bottom: ${({ isFocused }) =>
+      isFocused ? '1px solid var(--accent)' : '1px solid var(--white)'};
   }
 
   input::placeholder {

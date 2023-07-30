@@ -38,7 +38,7 @@ export default function Countries() {
         <SearchBar filterFn={filterCountries} />
       </Header>
       {loading ? (
-        <LoadingSpiner/>
+        <LoadingSpiner />
       ) : error ? (
         <div>Error</div>
       ) : (
