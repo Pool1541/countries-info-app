@@ -17,10 +17,6 @@ export const StyledSidebar = styled.aside`
   @media screen and (${BREAKPOINTS.TABLET_L}) {
     width: 100%;
   }
-
-  @media screen and (${BREAKPOINTS.MOVIL_L}) {
-    width: 30rem;
-  }
 `;
 
 export const LogoContainer = styled.div`

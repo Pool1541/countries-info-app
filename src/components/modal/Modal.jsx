@@ -4,6 +4,7 @@ import {
   ModalFeature,
   ModalImage,
   ModalTitle,
+  States,
   StyledModal,
   Title,
   Wrapper,
@@ -48,13 +49,21 @@ export default function Modal() {
               <p>{data?.country?.languages[0]?.name}</p>
             </ModalFeature>
             <ModalFeature>
-              <p>Prefijo :</p>
-              <p>+ {data?.country?.phone}</p>
-            </ModalFeature>
-            <ModalFeature>
               <p>Moneda :</p>
               <p>{data?.country?.currency}</p>
             </ModalFeature>
+            {data?.country?.states.length > 0 && (
+              <States>
+                <p>Estados :</p>
+                <ul>
+                  {data?.country?.states.map((state) => (
+                    <li key={state.name}>
+                      <p>{state.name}</p>
+                    </li>
+                  ))}
+                </ul>
+              </States>
+            )}
           </>
         )}
       </Wrapper>

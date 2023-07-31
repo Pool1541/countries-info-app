@@ -32,12 +32,14 @@ export const FIND_COUNTRY_BY_CODE = gql`
       native
       capital
       currency
-      phone
       continent {
         name
       }
       languages {
         code
+        name
+      }
+      states {
         name
       }
     }

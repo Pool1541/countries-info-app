@@ -94,6 +94,7 @@ export const ModalFeature = styled.div`
   align-items: center;
   margin-bottom: 2rem;
   white-space: nowrap;
+
   p:first-child {
     color: var(--accent);
     font-size: 3rem;
@@ -109,6 +110,31 @@ export const ModalFeature = styled.div`
     font-size: 2.8rem;
     @media screen and (${BREAKPOINTS.TABLET_L}) {
       font-size: 1.8rem;
+    }
+  }
+`;
+
+export const States = styled(ModalFeature)`
+  flex-direction: column;
+  align-items: flex-start;
+
+  ul {
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    height: 20rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 1px 2px 5px 1px #d4d4d4;
+
+    @media screen and (${BREAKPOINTS.TABLET_M}) {
+      margin-top: 0.5rem;
+      height: 8rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      font-size: 1.5rem !important;
+      color: var(--background-hover) !important;
     }
   }
 `;
