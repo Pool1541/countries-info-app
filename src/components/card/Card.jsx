@@ -29,7 +29,7 @@ export default function Card({ country }) {
       </Thumbnail>
       <CardContent isActive={currentCode === country.code}>
         <FlagContainer>
-          <Flag code={country.code} height={100} width={100} />
+          <Flag code={country.code} height={100} width={100} alt={`Bandera de ${country.name}`} />
         </FlagContainer>
         <CardTitle isActive={currentCode === country.code}>
           <h3>{country.name}</h3>

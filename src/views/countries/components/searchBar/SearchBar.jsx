@@ -43,7 +43,7 @@ export default function SearchBar({ filterFn }) {
         />
         {displayFilters && pathname == ROUTES.countries && <Filters />}
       </SearchBarInputWrapper>
-      <SearchBarButton>
+      <SearchBarButton title='Buscar país'>
         <SearchIcon />
         <span>Buscar</span>
       </SearchBarButton>
