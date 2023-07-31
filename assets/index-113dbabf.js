@@ -1,4 +1,4 @@
-var _v=(e,a)=>()=>(a||e((a={exports:{}}).exports,a),a.exports);var WE=_v((YE,ye)=>{function Hv(e,a){for(var c=0;c<a.length;c++){const i=a[c];if(typeof i!="string"&&!Array.isArray(i)){for(const o in i)if(o!=="default"&&!(o in e)){const t=Object.getOwnPropertyDescriptor(i,o);t&&Object.defineProperty(e,o,t.get?t:{enumerable:!0,get:()=>i[o]})}}}return Object.freeze(Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}))}(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const t of o)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function c(o){const t={};return o.integrity&&(t.integrity=o.integrity),o.referrerPolicy&&(t.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?t.credentials="include":o.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(o){if(o.ep)return;o.ep=!0;const t=c(o);fetch(o.href,t)}})();var Gv=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};function m7(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var ao={exports:{}},d7={},co={exports:{}},e1={};/**
+var _v=(e,a)=>()=>(a||e((a={exports:{}}).exports,a),a.exports);var JE=_v((XE,ye)=>{function Hv(e,a){for(var c=0;c<a.length;c++){const i=a[c];if(typeof i!="string"&&!Array.isArray(i)){for(const o in i)if(o!=="default"&&!(o in e)){const t=Object.getOwnPropertyDescriptor(i,o);t&&Object.defineProperty(e,o,t.get?t:{enumerable:!0,get:()=>i[o]})}}}return Object.freeze(Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}))}(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const t of o)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function c(o){const t={};return o.integrity&&(t.integrity=o.integrity),o.referrerPolicy&&(t.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?t.credentials="include":o.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(o){if(o.ep)return;o.ep=!0;const t=c(o);fetch(o.href,t)}})();var Gv=typeof globalThis<"u"?globalThis:typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{};function m7(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var ao={exports:{}},d7={},co={exports:{}},e1={};/**
  * @license React
  * react.production.min.js
  *
@@ -705,7 +705,7 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):n
   @media screen and (${f1.TABLET_M}) {
     font-size: 1.4rem;
   }
-`;function BE(){const{continents:e,changeParams:a,clearParams:c}=ns();return S.jsxs(EE,{children:[S.jsxs(AE,{children:[S.jsx("p",{children:"Filtrar por continentes"}),S.jsx("button",{type:"button",onClick:c,children:"Limpiar"})]}),S.jsx(CE,{children:e.map(i=>S.jsx(NE,{continent:i,handleClick:a},i.name))})]})}function NE({continent:e,handleClick:a}){return S.jsxs(PE,{title:e.name,type:"button",onClick:()=>a(e.name),children:[S.jsx(TE,{selected:e.selected,children:S.jsx("img",{src:e.image,alt:e.name})}),S.jsx(FE,{children:e.name})]})}function jE({filterFn:e}){const[a,c]=E.useState(""),[i,o]=E.useState(!1),{pathname:t}=o3(),n=os(f);function l(m){const d=m.target.value.charAt(0).toUpperCase()+m.target.value.slice(1);c(d)}function r(m){m.preventDefault(),e(a),f()}function s(){o(!0)}function f(){o(!1)}return S.jsxs(wE,{onSubmit:r,children:[S.jsxs(xE,{ref:n,isFocused:i,children:[S.jsx("label",{children:"País"}),S.jsx("input",{placeholder:"Escribe el pais que deseas ver",onChange:l,onClick:s,autoComplete:"disabled"}),i&&t==S2.countries&&S.jsx(BE,{})]}),S.jsxs(SE,{children:[S.jsx(bE,{}),S.jsx("span",{children:"Buscar"})]})]})}const OE=J.div`
+`;function BE(){const{continents:e,changeParams:a,clearParams:c}=ns();return S.jsxs(EE,{children:[S.jsxs(AE,{children:[S.jsx("p",{children:"Filtrar por continentes"}),S.jsx("button",{type:"button",onClick:c,children:"Limpiar"})]}),S.jsx(CE,{children:e.map(i=>S.jsx(NE,{continent:i,handleClick:a},i.name))})]})}function NE({continent:e,handleClick:a}){return S.jsxs(PE,{title:e.name,type:"button",onClick:()=>a(e.name),children:[S.jsx(TE,{selected:e.selected,children:S.jsx("img",{src:e.image,alt:e.name})}),S.jsx(FE,{children:e.name})]})}function jE({filterFn:e}){const[a,c]=E.useState(""),[i,o]=E.useState(!1),{pathname:t}=o3(),n=os(f);function l(m){const d=m.target.value.charAt(0).toUpperCase()+m.target.value.slice(1);c(d)}function r(m){m.preventDefault(),e(a),f()}function s(){o(!0)}function f(){o(!1)}return S.jsxs(wE,{onSubmit:r,children:[S.jsxs(xE,{ref:n,isFocused:i,children:[S.jsx("label",{children:"País"}),S.jsx("input",{placeholder:"Escribe el pais que deseas ver",onChange:l,onClick:s,autoComplete:"disabled"}),i&&t==S2.countries&&S.jsx(BE,{})]}),S.jsxs(SE,{children:[S.jsx(bE,{}),S.jsx("span",{children:"Buscar"})]})]})}function OE(e,{threshold:a=0,root:c=null,rootMargin:i="0%",freezeOnceVisible:o=!1}){const[t,n]=E.useState(),l=(t==null?void 0:t.isIntersecting)&&o,r=([s])=>{n(s)};return E.useEffect(()=>{const s=e==null?void 0:e.current;if(!!!window.IntersectionObserver||l||!s)return;const m={threshold:a,root:c,rootMargin:i},d=new IntersectionObserver(r,m);return d.observe(s),()=>d.disconnect()},[e==null?void 0:e.current,JSON.stringify(a),c,i,l]),t}const IE=J.div`
   flex: 1 1 auto;
   margin-top: 8rem;
   margin-right: 2rem;
@@ -723,12 +723,12 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):n
   @media screen and (${f1.MOVIL_L}) {
     grid-template-columns: 1fr;
   }
-`;function eo(){const{continentCode:e}=HM(),{pathname:a}=o3(),[c,i]=E.useState([]),{data:o,loading:t,error:n,getCountriesByContinent:l}=ns(),{isModalOpen:r}=nc();function s(f){const d=structuredClone(o.countries).filter(u=>u.name.includes(f));i(d)}return E.useEffect(()=>{e&&l(e)},[e]),E.useEffect(()=>{t||i(o.countries)},[t,a,o]),S.jsxs(Ta,{children:[S.jsx(Kn,{children:S.jsx(jE,{filterFn:s})}),t?S.jsx(rc,{}):n?S.jsx("div",{children:"Error"}):S.jsxs("div",{style:{display:"flex"},children:[S.jsx(OE,{children:c.slice(0,15).map(f=>S.jsx(aE,{country:f},f.code))}),r&&S.jsx(dE,{})]})]})}const IE=J.div`
+`;function eo(){const{continentCode:e}=HM(),{pathname:a}=o3(),[c,i]=E.useState([]),{data:o,loading:t,error:n,getCountriesByContinent:l}=ns(),{isModalOpen:r}=nc(),[s,f]=E.useState(15),m=E.useRef(null),d=OE(m,{rootMargin:"100px"});function u(v){const M=structuredClone(o.countries).filter(k=>k.name.includes(v));i(M)}return E.useEffect(()=>{d!=null&&d.isIntersecting&&o.countries.length>s&&f(v=>v+15)},[d]),E.useEffect(()=>{e&&l(e)},[e]),E.useEffect(()=>{t||i(o.countries)},[t,a,o]),S.jsxs(Ta,{children:[S.jsx(Kn,{children:S.jsx(jE,{filterFn:u})}),t?S.jsx(rc,{}):n?S.jsx("div",{children:"Error"}):S.jsxs("div",{style:{display:"flex"},children:[S.jsx(IE,{children:c.slice(0,s).map(v=>S.jsx(aE,{country:v},v.code))}),r&&S.jsx(dE,{})]}),S.jsx("div",{ref:m})]})}const LE=J.div`
   width: 300px;
   height: 300px;
   position: relative;
   border-radius: 3rem;
-`,LE=J.div`
+`,DE=J.div`
   height: 100%;
   width: 100%;
 
@@ -737,17 +737,17 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):n
     width: 100%;
     border-radius: 3rem;
   }
-`,DE=J.div`
+`,_E=J.div`
   position: absolute;
   bottom: -3.5rem;
-`;function _E({continent:e}){return S.jsx(IE,{children:S.jsxs(za,{to:`${S2.continents}/${e.code}`,children:[S.jsx(LE,{children:S.jsx("img",{src:g3[e.code]||g3.default,alt:"default image"})}),S.jsx(DE,{children:S.jsx("h3",{children:e.name})})]})})}const HE=J.div`
+`;function HE({continent:e}){return S.jsx(LE,{children:S.jsxs(za,{to:`${S2.continents}/${e.code}`,children:[S.jsx(DE,{children:S.jsx("img",{src:g3[e.code]||g3.default,alt:"default image"})}),S.jsx(_E,{children:S.jsx("h3",{children:e.name})})]})})}const GE=J.div`
   margin-left: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   row-gap: 6rem;
   column-gap: 2rem;
-`;function GE(){const{data:e,loading:a,error:c}=cs(XR);return c?S.jsx("div",{children:"Hubo un error"}):S.jsx(HE,{children:a?S.jsx(rc,{}):e.continents.map(i=>S.jsx(_E,{continent:i},i.code))})}function UE(){return S.jsx(Ta,{children:S.jsx(GE,{})})}function VE(){return S.jsxs(S.Fragment,{children:[S.jsx(bb,{}),S.jsxs(ay,{children:[S.jsx(F4,{path:S2.home,element:S.jsx(vb,{})}),S.jsx(F4,{path:S2.countries,element:S.jsx(eo,{})}),S.jsx(F4,{path:S2.continents,element:S.jsx(UE,{})}),S.jsx(F4,{path:S2.countriesByContinent,element:S.jsx(eo,{})})]})]})}const KE=nb`
+`;function UE(){const{data:e,loading:a,error:c}=cs(XR);return c?S.jsx("div",{children:"Hubo un error"}):S.jsx(GE,{children:a?S.jsx(rc,{}):e.continents.map(i=>S.jsx(HE,{continent:i},i.code))})}function VE(){return S.jsx(Ta,{children:S.jsx(UE,{})})}function KE(){return S.jsxs(S.Fragment,{children:[S.jsx(bb,{}),S.jsxs(ay,{children:[S.jsx(F4,{path:S2.home,element:S.jsx(vb,{})}),S.jsx(F4,{path:S2.countries,element:S.jsx(eo,{})}),S.jsx(F4,{path:S2.continents,element:S.jsx(VE,{})}),S.jsx(F4,{path:S2.countriesByContinent,element:S.jsx(eo,{})})]})]})}const qE=nb`
 
   @font-face {
     font-family: 'Ubuntu';
@@ -852,4 +852,4 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):n
   img {
     pointer-events: none;
   }
-`,qE=new TR({link:new Sr({uri:"https://countries.trevorblades.com/"}),cache:new SR}),QE=new iw({defaultOptions:{queries:{refetchOnWindowFocus:!1,refetchOnReconnect:!1,refetchOnMount:!1,retry:!1,cacheTime:1e3*60*60}}});function $E({children:e}){return S.jsx(_R,{client:qE,children:S.jsx(sw,{client:QE,children:S.jsx(ry,{children:S.jsx(yE,{children:S.jsx(sb,{children:S.jsxs(eE,{children:[e,S.jsx(KE,{})]})})})})})})}G8.createRoot(document.getElementById("root")).render(S.jsx($E,{children:S.jsx(VE,{})}))});export default WE();
+`,QE=new TR({link:new Sr({uri:"https://countries.trevorblades.com/"}),cache:new SR}),$E=new iw({defaultOptions:{queries:{refetchOnWindowFocus:!1,refetchOnReconnect:!1,refetchOnMount:!1,retry:!1,cacheTime:1e3*60*60}}});function WE({children:e}){return S.jsx(_R,{client:QE,children:S.jsx(sw,{client:$E,children:S.jsx(ry,{children:S.jsx(yE,{children:S.jsx(sb,{children:S.jsxs(eE,{children:[e,S.jsx(qE,{})]})})})})})})}G8.createRoot(document.getElementById("root")).render(S.jsx(WE,{children:S.jsx(KE,{})}))});export default JE();
