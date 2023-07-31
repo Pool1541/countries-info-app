@@ -44,7 +44,7 @@ export default function Countries() {
       ) : (
         <div style={{ display: 'flex' }}>
           <GridContainer>
-            {countries.slice(0, 15).map((country) => (
+            {countries.map((country) => (
               <Card key={country.code} country={country} />
             ))}
           </GridContainer>
