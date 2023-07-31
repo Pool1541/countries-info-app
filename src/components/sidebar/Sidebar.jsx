@@ -30,7 +30,10 @@ export default function Sidebar() {
           </li>
         </ul>
       </Navbar>
-      <ToggleButton isActive={display} onClick={toggleSidebar}>
+      <ToggleButton
+        isActive={display}
+        onClick={toggleSidebar}
+        title='Esconder/mostrar barra lateral'>
         <div className='line'></div>
         <div className='line'></div>
         <div className='line'></div>
